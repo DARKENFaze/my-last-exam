@@ -1,0 +1,314 @@
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mxn;
+
+.section-one {
+  background-color: var.$red-color;
+  padding-top: 170px;
+  padding-bottom: 50px;
+
+  .section-bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .left-text {
+      flex: 1 1 50%;
+      span {
+        font-family: var.$font-family;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 29.9px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: var.$text-color;
+      }
+      h1 {
+        font-family: "Varela Round", sans-serif;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 117px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        max-width: 555px;
+        color: var.$text-color;
+        padding-top: 35px;
+      }
+      p {
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: var.$text-color;
+        max-width: 453px;
+        padding-top: 35px;
+        padding-bottom: 40px;
+      }
+      .home-btn {
+        border: 1px solid rgba(255, 255, 255, 1);
+        padding: 8px 32px;
+        border-radius: 100px;
+        background: none;
+        color: var.$text-color;
+        font-family: var.$font-family;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .right-foot {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .section-bg .left-text h1 {
+      font-size: 70px;
+      line-height: 90px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .section-bg .left-text {
+      span {
+        font-size: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 60px;
+        line-height: 75px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+      .home-btn {
+        padding: 6px 28px;
+        font-size: 14px;
+      }
+    }
+    .section-bg {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .right-foot {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    .section-bg .left-text {
+      span {
+        font-size: 18px;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 65px;
+      }
+      p {
+        font-size: 13px;
+      }
+      .home-btn {
+        padding: 5px 24px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    .section-bg .left-text {
+      span {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .home-btn {
+        padding: 4px 20px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+// done
+
+// next to
+.sc-three-bg {
+  background-color: var.$bg-color;
+  padding: 50px 0;
+
+  .carusel-father {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-family: var.$font-family;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: rgba(187, 35, 57, 1);
+    margin-bottom: 20px;
+  }
+
+  .carusel-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+
+    .carusel_in_two {
+      flex: 1 1 200px;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 0px 35px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+
+      .carusel-buy {
+        border: 1px solid red;
+        border-radius: 100px;
+        padding: 5px 35px;
+        text-align: center;
+        text-decoration: none;
+        color: var.$color-black;
+        font-weight: bold;
+        font-size: 1rem;
+        background: none;
+        transition: 0.5s ease;
+      }
+
+      .carusel-buy:hover {
+        background-color: #ff0000;
+        color: var.$text-color;
+      }
+
+      img {
+        transition: 0.5s ease;
+        max-width: 100%;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        box-shadow: none;
+        background: none;
+        transition: 0.5s ease;
+        border-radius: 50px;
+      }
+
+      p {
+        font-family: Open Sans;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+        color: rgba(36, 36, 36, 1);
+        max-width: 270px;
+        padding-top: 10px;
+      }
+
+      span {
+        font-family: Open Sans;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: center;
+        color: var.$red-color;
+      }
+    }
+  }
+
+  .nav-link {
+    color: black;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 100px;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #dc3545;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carusel-two {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sc-three-bg {
+    padding: 30px 0;
+  }
+
+  .carusel-two {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carusel_in_two {
+    padding: 10px;
+  }
+
+  .carusel-buy {
+    font-size: 0.875rem;
+    padding: 5px 20px;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+}
+
+// done
+
+// next

@@ -1,0 +1,56 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+header {
+  background-color: var.$red-color;
+  // margin-bottom: 20rem;
+  nav {
+    @include mxn.flex(center, space-between, 0);
+    padding: 26px 0 27px;
+    @media (max-width: 670px) {
+      display: block;
+    }
+    .nav-menu {
+      @include mxn.flex(center, 0, 40px);
+      @media (max-width: 670px) {
+        @include mxn.flex(center, center, 40px);
+        padding-top: 15px;
+      }
+      .nav-menu-item {
+        @include mxn.flex(center, 0, 40px);
+        li {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+            @include mxn.family(
+              "Open Sans",
+              16px,
+              400,
+              21.79px,
+              var.$text-color
+            );
+          }
+        }
+      }
+      .login-link {
+        text-decoration: none;
+        @include mxn.family("Open Sans", 16px, 400, 21.79px, var.$text-color);
+        border: var.$text-color solid 1px;
+        padding: 10px 40px;
+        border-radius: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  header nav .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 15px;
+  }
+}
+// done
