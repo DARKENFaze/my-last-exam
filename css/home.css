@@ -271,3 +271,170 @@
     font-size: 1.25rem;
   }
 }
+.testimony {
+  background-color: rgb(244, 244, 244);
+}
+.testimony .estimony__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testimony .estimony__text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 29.9px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+.testimony .estimony__text h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 62.4px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.testimony .estimony__text img {
+  max-width: 100%;
+}
+.testimony .my_name_card {
+  display: flex;
+  align-items: center;
+  gap: 50vh;
+  padding-bottom: 35px;
+}
+.testimony .my_name_card .in-carusel-cardss {
+  border: 1px solid rgba(255, 0, 0, 0.1);
+  background-color: rgb(253, 253, 253);
+  width: 410px;
+  height: 198px;
+  gap: 0px;
+  border-radius: 10px;
+  opacity: 0px;
+}
+.testimony .my_name_card .in-carusel-cardss .single-carusel {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  padding: 30px 20px;
+  gap: 20px;
+}
+.testimony .my_name_card .in-carusel-cardss .single-carusel h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+}
+.testimony .my_name_card .in-carusel-cardss .single-carusel span {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  max-width: 340px;
+}
+.testimony .my_name_card .in-carusel-cardss .single-carusel img {
+  max-width: 215px;
+}
+
+.geritch-upd {
+  font-family: "Arial, sans-serif";
+  background-color: #fff;
+}
+.geritch-upd .grtch_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.geritch-upd .grtch_title span {
+  font-family: "Varela Round", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 29.9px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+.geritch-upd .grtch_title img {
+  max-width: 100%;
+}
+.geritch-upd .grtch_title p {
+  font-family: "Varela Round", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 62.4px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgb(187, 35, 57);
+}
+.geritch-upd .tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.geritch-upd .tip-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 300px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.geritch-upd .tip-card img {
+  width: 100%;
+  height: auto;
+}
+.geritch-upd .tip-card .tip-content {
+  padding: 15px;
+}
+.geritch-upd .tip-card .tip-content h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.geritch-upd .tip-card .tip-content p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+.geritch-upd .tip-card .tip-content .read-more-link {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.geritch-upd .tip-card .tip-content .tip-date {
+  font-size: 0.8em;
+  color: #aaa;
+}
+.geritch-upd .view-more-container {
+  text-align: center;
+  padding: 20px;
+}
+.geritch-upd .view-more-container .view-more-link {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #ff0000;
+  border-radius: 100px;
+  transition: background 0.3s, color 0.3s;
+}
+.geritch-upd .view-more-container .view-more-link:hover {
+  background: #ff0000;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .geritch-upd .tips-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .geritch-upd .tip-card {
+    max-width: 100%;
+  }
+}

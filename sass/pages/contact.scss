@@ -1,0 +1,144 @@
+$primary-color: #ff4a4a;
+$secondary-color: #f7f7f7;
+$font-color: #333;
+$border-radius: 10px;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $secondary-color;
+  color: $font-color;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+.in_top_tp_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    .icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .info {
+      h3 {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+        color: $font-color;
+      }
+    }
+  }
+}
+
+.contact-form {
+  flex: 2;
+  max-width: 600px;
+  margin: 20px;
+  background: #fff;
+  padding: 30px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 10px 0 20px;
+  }
+
+  form {
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      input,
+      textarea {
+        flex: 1;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+// done
+
+// next
+
+.in_map {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 35px;
+
+  iframe {
+    border-radius: 30px;
+    box-shadow: 0px 0px 72px 10px rgba(0, 0, 0, 0.411);
+  }
+}
