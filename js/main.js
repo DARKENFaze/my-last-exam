@@ -57,4 +57,13 @@ function close_video() {
   videoOverlay.querySelector("iframe").remove();
 }
 
-//  slider
+//  menu-toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  toggleButton.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    toggleButton.classList.toggle("active");
+  });
+});

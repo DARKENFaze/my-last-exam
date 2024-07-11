@@ -3,19 +3,85 @@
 
 header {
   background-color: var.$red-color;
-  // margin-bottom: 20rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  background-color: rgba(187, 35, 58, 0.473);
+
   nav {
     @include mxn.flex(center, space-between, 0);
     padding: 26px 0 27px;
     @media (max-width: 670px) {
       display: block;
     }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        display: block;
+      }
+
+      .hamburger {
+        width: 30px;
+        height: 2px;
+        background-color: var.$text-color;
+        display: block;
+        position: relative;
+        transition: background 0.3s ease;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background-color: var.$text-color;
+          display: block;
+          position: absolute;
+          transition: all 0.3s ease;
+        }
+
+        &::before {
+          top: -8px;
+        }
+
+        &::after {
+          top: 8px;
+        }
+      }
+
+      &.active .hamburger {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
     .nav-menu {
       @include mxn.flex(center, 0, 40px);
       @media (max-width: 670px) {
+        display: none;
         @include mxn.flex(center, center, 40px);
         padding-top: 15px;
+
+        &.active {
+          display: flex;
+        }
       }
+
       .nav-menu-item {
         @include mxn.flex(center, 0, 40px);
         li {
@@ -31,11 +97,8 @@ header {
             );
           }
         }
-        // @media (max-width: 508px) {
-        //   display: flex;
-        //   flex-direction: column;
-        // }
       }
+
       .login-link {
         text-decoration: none;
         @include mxn.family("Open Sans", 16px, 400, 21.79px, var.$text-color);
@@ -57,4 +120,5 @@ header {
     padding-top: 15px;
   }
 }
+
 // done
